@@ -2,7 +2,7 @@
 name: E#04
 author: Andrey Plugin
 email: 9keepa@gmail.com
-link: https://www.youtube.com/user/9keepa/videos
+link: https://www.youtube.com/channel/UCNN3bpPlWWUkUMB7gjcUFlw
 '''
 
 import requests

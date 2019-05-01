@@ -2,7 +2,7 @@
 name: E#02
 author: Andrey Plugin
 email: 9keepa@gmail.com
-link: https://www.youtube.com/user/9keepa/videos
+link: https://www.youtube.com/channel/UCNN3bpPlWWUkUMB7gjcUFlw
 '''
 
 from bs4 import BeautifulSoup
