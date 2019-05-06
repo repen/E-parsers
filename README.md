@@ -6,6 +6,5 @@
 
 <p>Используйте название  <span style="color:#713731;">E#01 </span> для поиска нужного видео</p> 
 
-<p> в файлах <span style="color:#445EE4"> main.py </span> находится код с видео, а в <span style="color:#445EE4">temp.py</span> код который подготовительный для записи видео <br>
-под temp код который делал до видео
+<p> в файлах <span style="color:#445EE4"> main.py </span> находится код с видео, а в <span style="color:#445EE4">temp.py</span> код подготовительный  <br>
 </p>
