@@ -5,6 +5,8 @@ email:  9keepa@gmail.com
 link:   https://www.youtube.com/channel/UCNN3bpPlWWUkUMB7gjcUFlw
 github: https://github.com/repen/E-parsers
 covid-19 api repo: https://github.com/pomber/covid19
+
+MIT License https://github.com/repen/E-parsers/blob/master/License
 '''
 import requests
 

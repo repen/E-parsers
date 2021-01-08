@@ -1,3 +1,7 @@
+'''
+Copyright (c) 2019 - 2021 Andrey Plugin
+MIT License https://github.com/repen/E-parsers/blob/master/License
+'''
 import json
 
 with open("data.json", "r", encoding="utf8") as f:

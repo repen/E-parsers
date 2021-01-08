@@ -4,6 +4,9 @@ author: Andrey Plugin
 email:  9keepa@gmail.com
 link:   https://www.youtube.com/channel/UCNN3bpPlWWUkUMB7gjcUFlw
 github: https://github.com/repen/E-parsers
+
+Copyright (c) 2019 - 2021 Andrey Plugin
+MIT License https://github.com/repen/E-parsers/blob/master/License
 '''
 
 
@@ -42,7 +45,9 @@ for page in range(1, 5):
               "catalog_filter": [{"mark": "VAZ", "model": "2114"}],
               "section": "all", "category": "cars", "sort": "fresh_relevance_1-desc", "page": page}
     response = requests.post(url, json=params, headers=headers_dict)
-    offers.extend(response.json()['offers'])
-    print("current page: ", page)
+    print(response.text)
+    break
+    # offers.extend(response.json()['offers'])
+    # print("current page: ", page)
 
-save_json("data.json", offers)
+# save_json("data.json", offers)

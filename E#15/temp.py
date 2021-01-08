@@ -1,41 +1,47 @@
 '''
-name: E#15
-author: Andrey Plugin
-email: 9keepa@gmail.com
-link: https://www.youtube.com/channel/UCNN3bpPlWWUkUMB7gjcUFlw
+MIT License https://github.com/repen/E-parsers/blob/master/License
 '''
-import requests
-from bs4 import BeautifulSoup
+
 import sqlite3
+import csv
+def create_table():
+    conn = sqlite3.connect("work.db")
+    sql = "CREATE TABLE work (code TEXT, documentid TEXT)"
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    conn.close()
 
-base_url = "http://books.toscrape.com/catalogue"
-url = "http://books.toscrape.com/catalogue/category/books/fantasy_19/index.html"
+def insert_table(args):
+    conn = sqlite3.connect("work.db")
+    cursor = conn.cursor()
+    cursor.executemany("INSERT INTO work VALUES(?,?)", args)
+    conn.commit()
+    conn.close()
 
-response = requests.get(url)
+def get_data():
+    conn = sqlite3.connect("work.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM work")
+    res = cursor.fetchall()
+    conn.close()
+    return res
+# create_table()
+# for data in get_data():
+#     code = data[0]
+#     docid = data[1]
+#     print(code, docid)
 
-html = response.text
-
-soup = BeautifulSoup(html, "html.parser")
-container = soup.select_one("ol.row")
-books = container.find_all("li")
-urls = [base_url + "/" + x.select_one("h3 a")['href'].replace("../", "") for x in books]
-
-args = []
-for url in urls:
-    response = requests.get(url)
-    html = response.text
-    soup = BeautifulSoup(html, "html.parser")
-    name = soup.select_one("h1").text
-    price = soup.select_one("p.price_color").text[2:]
-    description = soup.find("div", {"class":"sub-header"}).find_next("p").text
-    info = str(soup.select_one("table.table.table-striped"))
-    args.append((name, price, description, info))
-
-conn = sqlite3.connect("mydata.db")
-cursor = conn.cursor()
-cursor.executemany("INSERT INTO books VALUES(?,?,?,?)", args)
-conn.commit()
-conn.close()
+'sad'.r
+for x in range(10):
+    insert_table([("x", "x")])
 
 
+# conn = sqlite3.connect("mydata.db")
+# cursor = conn.cursor()
 
+# sql = "CREATE TABLE books (name TEXT, price TEXT, description TEXT, info TEXT)"
+# sql = "SELECT * FROM books"
+# cursor.execute(sql)
+# res = cursor.fetchall()
+# print(res)
+# sql = "INSERT INTO books VALUES (?, ?, ?, ?)"

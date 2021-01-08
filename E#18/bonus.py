@@ -5,6 +5,10 @@ email:  9keepa@gmail.com
 link:   https://www.youtube.com/channel/UCNN3bpPlWWUkUMB7gjcUFlw
 github: https://github.com/repen/E-parsers
 covid-19 api repo: https://github.com/pomber/covid19
+
+
+Copyright (c) 2019 - 2021 Andrey Plugin
+MIT License https://github.com/repen/E-parsers/blob/master/License
 '''
 import requests
 from string import Template
@@ -81,7 +85,7 @@ def generate_chart_ver02( template_html, data ):
 
 # chart 1
 html01   = read_template("template01.html")
-italy    = get_country("russia")[-5:]
+italy    = get_country("russia")[-45:]
 chart_01 = generate_chart_ver01(html01, italy, "Russia")
 output( chart_01, "output01.html" )
 

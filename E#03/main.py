@@ -3,6 +3,8 @@ name: E#03
 author: Andrey Plugin
 email: 9keepa@gmail.com
 link: https://www.youtube.com/user/9keepa/videos
+
+MIT License https://github.com/repen/E-parsers/blob/master/License
 '''
 
 import requests

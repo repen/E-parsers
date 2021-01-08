@@ -4,6 +4,8 @@ author: Andrey Plugin
 email: 9keepa@gmail.com
 link: https://www.youtube.com/channel/UCNN3bpPlWWUkUMB7gjcUFlw
 readme method HEAD: http://lib.ru/WEBMASTER/rfc2068/section-9.html#p4
+
+MIT License https://github.com/repen/E-parsers/blob/master/License
 '''
 import requests
 

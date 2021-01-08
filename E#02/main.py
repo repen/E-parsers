@@ -3,6 +3,8 @@ name: E#02
 author: Andrey Plugin
 email: 9keepa@gmail.com
 link: https://www.youtube.com/channel/UCNN3bpPlWWUkUMB7gjcUFlw
+
+MIT License https://github.com/repen/E-parsers/blob/master/License
 '''
 
 from bs4 import BeautifulSoup
